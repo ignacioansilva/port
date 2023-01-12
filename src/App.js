@@ -1,7 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
 import './blobz.css';
-import foto from "./Imagen de WhatsApp 2022-11-10 a las 11.35.33 (2).jpg"
+import foto from "./imagenes/Imagen de WhatsApp 2022-11-10 a las 11.35.33 (2).jpg"
+import js from "./imagenes/JavaScript.png"
+import pjdata from "./imagenes/pj-data.png";
+import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
 
 function App() {
   return (
@@ -18,51 +21,90 @@ function App() {
 
         
            <div className="blob"> 
+           <Zoom>
             <div className="blob-1">
               <div >
-                <img className="picture" src={foto}/>
+                <img className="picture" src={foto} alt="personal-pic"/>
               </div>
-
+           
             <div className="white-blob">
-            <svg
-              width="500"
-              height="500"
+  
+              <svg
+              width="700"
+              height="700"
               viewBox="0 0 1000 1000"
               xmlns="http://www.w3.org/2000/svg"
-              
             >
-           
-              
               <defs>
+                
+                
+                
+                
+                
+                
+                
                 <clipPath id="shape">
-         
-                  <path fill="currentColor" d="M930.5,656Q872,812,717.5,833.5Q563,855,452.5,814.5Q342,774,225.5,708Q109,642,148.5,514.5Q188,387,239,261Q290,135,422.5,162.5Q555,190,715.5,187Q876,184,932.5,342Q989,500,930.5,656Z"></path>
+                  <path fill="currentColor" d="M779,633Q653,766,493,777.5Q333,789,221.5,644.5Q110,500,181,285Q252,70,494.5,79.5Q737,89,821,294.5Q905,500,779,633Z"></path>
                 </clipPath>
               </defs>
-              <g  clip-path="url(#shape)">
-         
-                <path fill="#F2F2F2" d="M930.5,656Q872,812,717.5,833.5Q563,855,452.5,814.5Q342,774,225.5,708Q109,642,148.5,514.5Q188,387,239,261Q290,135,422.5,162.5Q555,190,715.5,187Q876,184,932.5,342Q989,500,930.5,656Z" />
-              </g>
+            
               
+
+              <g  clip-path="url(#shape)">
+                <path fill="#F2F2F2" d="M779,633Q653,766,493,777.5Q333,789,221.5,644.5Q110,500,181,285Q252,70,494.5,79.5Q737,89,821,294.5Q905,500,779,633Z" />
+              </g>
+
+              
+            
             </svg>
+
+
+            </div>
             <p className="presentation"><b>¡Hello!</b>
              <br />
               My name is Ignacio. I'm 19 years old and I'm a programmer and passionate about technology and web development. I´ve studied at Soy Henry from the beginning of 2022. I also completed some programming courses with which I learned to use JavaScript, TypeScript, React, Node.js, Express, MySQL, Git, GitHub, etc. Currently I've ended my studies and I'm looking for my first job as a Developer.
             </p>
-
-            </div>
-            </div>
-            </div>  
+            </div> 
+            </Zoom>
+            </div> 
       </div>
       </header>
+
+      <Fade left>
+      <div data-aos="fade-up" className="section-img">
+        <img src={pjdata} alt="pj-data" />
+        <h1>MY TECHNOLOGIES</h1>
+      </div>
+      </Fade>
+ 
+      <Fade right>
       <section className="technologies">
-        <div className="techs">
-          <p>Technologies</p>
+        <div data-aos="fade-up" className="techs">
           <div className="tech-images">
+          <div className="blob-js">
+              <img src={js} alt="js"/>
+            </div>
+            <div className="blob-js">
+              <img src={js} alt="js"/>
+            </div>
+            <div className="blob-js">
+              <img src={js} alt="js"/>
+            </div>
+            <div className="blob-js">
+              <img src={js} alt="js"/>
+            </div>
+            <div className="blob-js">
+              <img src={js} alt="js"/>
+            </div>
+            <div className="blob-js">
+              <img src={js} alt="js"/>
+            </div>
 
           </div>
+          
         </div>
       </section>
+      </Fade>
 
     </div>
   );
